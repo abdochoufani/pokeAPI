@@ -1,0 +1,19 @@
+    <div>
+        <a href="/all-pokemon">Back To List</a>
+        <div class=" pokemon card">
+            <img src="{{response.data.sprites.front_default}}" alt="pokemon img">
+            <div class="container">
+            <h1>{{response.data.name}}</h1>
+            <p>Height:{{response.data.height}}</p>
+            <p>Weight: {{response.data.weight}}</p>
+            <div>
+                <h4>Abilities</h4>
+            <ul>
+                {{#each response.data.abilities  }}
+                    <li>{{ability.name}}</li>
+                {{/each}}
+            </ul>
+            </div>
+          </div>
+        </div>
+    </div>
